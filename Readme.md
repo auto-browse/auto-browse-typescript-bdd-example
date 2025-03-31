@@ -23,6 +23,21 @@ LLM_MODEL=gpt-4o-mini  # Optional, defaults to gpt-4o-mini
 
 4. Install dependencies
 
+### ⚠️ Important: Playwright Version Requirements
+
+When using Auto Browse with playwright-bdd, you must use specific Playwright versions for compatibility:
+
+```bash
+"@playwright/test": "1.52.0-alpha-1743011787000"
+"playwright": "1.52.0-alpha-1743011787000"
+```
+
+To handle version conflicts:
+
+1. Remove any existing Playwright installations
+2. Clear npm cache if needed: `npm cache clean --force`
+3. Install dependencies with the legacy flag:
+
 ```bash
 npm install --legacy-peer-deps
 ```
