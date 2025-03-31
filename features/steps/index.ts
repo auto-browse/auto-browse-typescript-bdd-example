@@ -1,7 +1,7 @@
 import { auto } from "@auto-browse/auto-browse";
-import { Given, When, Then } from './fixtures';
+import { Given, When as aistep, Then } from './fixtures';
 
 
-When(/^(.*)$/, async ({ page }, action: string) => {
+aistep(/^(.*)$/, async ({ page }, action: string) => {
     await auto(action, { page });
 });
